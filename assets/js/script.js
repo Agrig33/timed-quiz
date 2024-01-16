@@ -60,7 +60,8 @@ var choiceNode = document.createElement("button");
 function questionClick() {
 // check if user entered wrong answer
 if (this.value !== questions[currentQuestionIndex].answer) {
-//penalize
+
+    //penalize
     time -= 10;
 if (time < 0) {
     time = 0;
@@ -79,10 +80,78 @@ if (time < 0) {
         feedbackEl.setAttribute("class", "feedback hide");
 }, 1000);
 
-//moving on to next question
+//moving onto next question
+currentQuestionIndex++;
+
+//check to see if there are any questions left
 if (currentQuestionIndex === questions.length) {
     quizEnd();
     } else {
     getQuestion();
     }
 }
+
+function quizEnd() {
+//stopping timer
+    clearInterval(timerId);
+
+//show end screen
+var endScreenEl = document.getmyElementId("end-screen");
+    endScreenEl.removeAttribute("class");
+
+//final score
+var finalScoreEl = document.getmyElementId("final-score");
+    finalScoreEl.textContent = time;
+
+//hide question section
+    questionsEl.setAttribute("class", "hide");
+}
+
+function clockTick() {
+//update the time
+    time--;
+    timerEl.textContent = time;
+
+//check if there is time left
+if (time <= 0) {
+    quizEnd();
+ }
+}
+
+function saveHighscore() {
+var initials = initialsEl.value.trim();
+
+//make sure value is not empty
+if (initials !== "") {
+    var highscores = JSON.parse(window/localStorage.getItem("highscores")) || [];
+
+//format new score object for current user
+var newScore = {
+    score: time,
+    initials: initials
+};
+
+//save to local storage
+    highscores.push(newScore);
+    window.localStorage.setItem("highscores", JSON.stringify(highscores));
+
+//redirecting to next page
+    window.AbortController.location.href = "highscores.html";
+ }
+}
+
+function checkForEnter(event) {
+
+// "13" re[resents the enter key
+if (event.key === "Enter") {
+    saveHighscore();
+ }
+}
+
+// submitting initials
+submitBtn.onclick = saveHighscore;
+
+// start button is click to start quiz
+startBtn.onclick = startQuiz;
+
+initialsEl.onkeyup = checkForEnter;
