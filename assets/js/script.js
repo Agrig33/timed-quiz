@@ -77,10 +77,12 @@ if (time < 0) {
     feedbackEl.setAttribute("class", "feedback");
     setTimeout(function() {
         feedbackEl.setAttribute("class", "feedback hide");
+}, 1000);
 
+//moving on to next question
+if (currentQuestionIndex === questions.length) {
+    quizEnd();
+    } else {
+    getQuestion();
     }
-
-
-
-}
 }
