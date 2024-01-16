@@ -10,7 +10,7 @@ a {
 }
 
 a:hover {
-    color: aliceblue;
+    color: rgb(15, 133, 19);
 }
 
 button {
@@ -21,12 +21,12 @@ button {
     border-radius: 10px;
     border: 0;
     padding: 2px 10px;
-    color: aliceblue;
+    color: rgb(243, 239, 239);
     transition: background-color 0.2s;
 }
 
 button:hover {
-    background-color: aliceblue;
+    background-color: rgb(21, 225, 35);
 }
 
 .choices button {
@@ -44,7 +44,7 @@ ol {
 }
 
 li:nth-child(odd) {
-    background-color: aliceblue;
+    background-color: rgb(146, 34, 206);
 }
 
 .wrapper {
