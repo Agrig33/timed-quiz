@@ -7,7 +7,7 @@ var questions = [
         answer: "required"
     },
     {
-        title: "In HTML, which attribute specifies tje URL of the page the link goes to?",
+        title: "In HTML, which attribute specifies the URL of the page the link goes to?",
         choices: ["<a>", "href", "src", "alt"], 
         answer: "href"
     },
@@ -35,6 +35,6 @@ var questions = [
         title: "In JavaScript, Arrays can be used to store ________.",
         choices: ["booleans", "numbers and strings", "other Arrays", "all of the above"],
         answer: "all of the above"
-    },
+    }
 
 ];
