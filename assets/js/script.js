@@ -45,8 +45,8 @@ var titleEl = document.getElementById("question-title");
 //create new button for each choice
 var choiceNode = document.createElement("button");
         choiceNode.setAttribute("class", "choice");
-        choiceNode.setAttribute("value", "choice");
-        choiceNode.textContent = i + 1 + " . " + choice;
+        choiceNode.setAttribute("value", choice);
+        choiceNode.textContent = i + 1 + ". " + choice;
 
 //attach click event listener to each choice
     choiceNode.onclick = questionClick;
@@ -60,7 +60,7 @@ function questionClick() {
 // check if user entered wrong answer
 if (this.value !== questions[currentQuestionIndex].answer) {
 
-    //penalize
+//penalize
     time -= 10;
 if (time < 0) {
     time = 0;
@@ -78,7 +78,7 @@ if (time < 0) {
     feedbackEl.setAttribute("class", "feedback");
     setTimeout(function() {
         feedbackEl.setAttribute("class", "feedback hide");
-}, 1000);
+}, 800);
 
 //moving onto next question
 currentQuestionIndex++;
