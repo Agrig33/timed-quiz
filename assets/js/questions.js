@@ -1,29 +1,29 @@
 //Questions, Choices and Answers
 var questions = [
 {
-    title: "In HTML, which attribute is used to specify that an input field must be filled out?",
-    choices: ["formvalidate", "required", "placeholder", "validate"], 
-    answer: "required"
+    title: "Inside which HTML element do we put the JavaScript?",
+    choices: ["<js>", "<javascript>", "<script>", "<scripting>"], 
+    answer: "<script>"
 },
 {
-    title: "In HTML, which attribute specifies the URL of the page the link goes to?",
-    choices: ["< a >", "href", "src", "alt"], 
-    answer: "href"
+    title: "How do you round the number 7.25, to the nearest integer?",
+    choices: ["Math.rnd(7.25)", "Math.round(7.25)", "round(7.25)", "rnd(7.25)"], 
+    answer: "Math.round(7.25)"
 },
 {
-    title: "Which HTML attribute is used to define inline styles?",
-    choices: ["style", "styles", "font", "class"],
-    answer: "style"
+    title: "Which event occurs when the user clicks on an HTML element?",
+    choices: ["onclick", "onmouseclick", "onmouseover", "onchange"],
+    answer: "onclick"
 },
 {
-    title: "Which CSS property controls the text size?",
-    choices: ["text-size", "font-style", "text-style", "font-size"],
-    answer: "font-size"
+    title: "How does a FOR loop start?",
+    choices: ["for (i = 0; i <= 5; i++)", "for (i <= 5; i++)", "for (i = 0; i <= 5)", "for i = 1 to 5"],
+    answer: "for (i = 0; i <= 5; i++)"
 },
 {
-    title: "What is the default value of the position property?",
-    choices: ["absolute", "static", "relative", "fixed"],
-    answer: "static"
+    title: "How to write an IF statement in JavaScript?",
+    choices: ["if i = 5 then", "if (i == 5)", "if i = 5", "if i == 5 then"],
+    answer: "if (i == 5)"
 },
 {
     title: "In JavaScript, which operator is used to assign a value to a variable?",
