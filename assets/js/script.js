@@ -74,7 +74,7 @@ if (time < 0) {
     feedbackEl.textContent = "Correct. Good Job!";
 }
 
-// flash corrent/incorrect feedback on page 
+// flash correct/incorrect feedback on page 
     feedbackEl.setAttribute("class", "feedback");
     setTimeout(function() {
         feedbackEl.setAttribute("class", "feedback hide");
